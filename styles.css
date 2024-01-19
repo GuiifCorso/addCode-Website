@@ -1,0 +1,162 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: rgb(36, 34, 34);
+    border: 1px solid antiquewhite;
+    padding: 3rem;
+    border-radius: 12px;
+}
+
+code {
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+.up-itms {
+    color: rgb(224, 224, 224);
+}
+
+.up-itms span {
+    color: rgb(30, 121, 60);
+}
+
+.up-bar {
+    margin: auto;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.underline {
+    width: 200px;
+    height: 5px;
+    background-color: rgb(30, 121, 60);
+    margin: auto;
+    border-radius: 12px;
+}
+
+form {
+    text-align: center;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    width: 400px;
+    margin-top: 3rem;
+    gap: 12px;
+}
+
+textarea {
+    max-width: 400px;
+    max-height: 200px;
+    min-height: 200px;
+    min-width: 400px;
+    border-radius: 12px;
+    text-align: left;
+    padding: 8px;
+}
+
+.main-container {
+    background-color: rgb(41, 151, 78);
+    max-width: 600px;
+    margin: auto;
+    padding: 3rem;
+    margin-top: 3rem;
+    border-radius: 40px;
+}
+
+#code_name {
+    text-align: center;
+    border-radius: 12px;
+
+}
+
+.form_input {
+    border: 1px solid rgb(36, 34, 34);
+}
+
+#code_add {
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 3rem;
+    border: 1px solid rgb(36, 34, 34);
+    cursor: pointer;
+}
+
+.code {
+    color: aliceblue;
+    display: grid;
+    margin: auto;
+    border: 2px solid white;
+    width: fit-content;
+    padding: 3rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.content_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.code_name_container input, textarea {
+    background-color: rgb(181, 224, 196);
+}
+
+form label {
+    font-size: 1.2rem;
+}
+
+.code_button {   
+    background-color: transparent;
+    color: rgb(30, 121, 60);
+    border: none;
+    font-size: large;
+    margin: 3rem;
+    cursor: pointer;
+}
+
+#popupContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+  
+#popupContent {
+    color: white;
+    border-radius: 12px;
+    position: absolute;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(30, 121, 60);
+    padding: 20px;
+    text-align: center;
+}
+
+#editDone {
+    background-color: transparent;
+    border: none;
+    font-size: large;
+    color: white;
+    cursor: pointer;
+}
+
+#closePopupButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
