@@ -119,15 +119,15 @@ function editCode(event) {
         codes.forEach((code) => { //Para cada código
             if (closestArticle.contains(code)){ //Se o article mais próximo conter o código
                 codetxt = code.innerHTML //Buscar o valor dentro dele (o próprio código)
-                popupContent.value = codetxt
+                popupContent.value = codetxt //Atualiza o valor do popup para ser igual ao do código
 
                 const editDoneBtn = document.querySelector('#editDone')
                 editDoneBtn.addEventListener('click', () => {
-                    edit(codetxt, updateCode)
+                    edit(codetxt, updateCode) //Quando o botão de finalizar for clicado, mandará o codetxt e o updateCode para a função edit
                 })
 
-                function updateCode(newCode) {
-                    code.innerHTML = newCode
+                function updateCode(newCode) { //Função chamada dentro da função edit com o valor do novo texto do código
+                    code.innerHTML = newCode //O código antigo ganha o valor do novo código 
                 }
             }
         })
@@ -141,12 +141,11 @@ function editCode(event) {
 function closeEdit(event) {
     //Fecha o popup
     popupContainer.style.display = 'none';
+    //Zera o valor do popup
     popupContent.value = '';
 }
 
-function edit(oldTxt, updateFunction , newTxt) {
-    newTxt = popupContent.value
-    oldTxt = newTxt
-    updateFunction(oldTxt)
-    console.log(oldTxt)
+function edit(oldTxt, updateFunction) { //Função edit recebe valores do texto antigo e do updateFunction para conseguir chamar a função de update
+    newTxt = popupContent.value //Novo texto será o que estiver dentro do popup
+    updateFunction(newTxt) //Ativa a função de update com o valor do novo texto
 }
